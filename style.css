@@ -1,0 +1,70 @@
+*, html {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+:root {
+    --menu-width: 15%;
+    --main-width: calc(100vw - var(--menu-width));
+    
+    --menu-background: #01121f;
+    --main-background: #011627;
+}
+
+section#menu {
+    background-color: var(--menu-background);
+    position: fixed;
+    width: var(--menu-width);
+    height: 100vh;
+}
+section#menu div:first-child {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+section#menu div:first-child h1 u {
+    cursor: pointer;
+}
+section#menu .separator  {
+    margin: 10px 0;
+    border: solid 2px var(--main-background);
+}
+section#menu #repoList {
+    /* background-color: red; */
+    width: 100%;
+    height: calc(100% - 60px);
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
+    overflow-y: auto;
+}
+section#menu #repoList button {
+    background: none;
+    border: solid 2px #1c2128;
+    outline: none;
+    border-radius: 0.2rem;
+    padding: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+}
+section#menu #repoList button:hover {
+    background: #1c2128;
+    transition: all 0.15s ease-in-out;
+}
+
+section#main {
+    background-color: var(--main-background);
+    position: fixed;
+    left: var(--menu-width);
+    width: var(--main-width);
+    height: 100vh;
+}
+section#main div.line {
+    background-color: red;
+    position: fixed;
+    left: var(--main-width);
+    width: var(--main-width);
+    height: 33%;
+}
